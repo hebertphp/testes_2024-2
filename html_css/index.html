@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog de Motociclistas</title>
+  <style>
+    /* Estilos Globais */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    /* Estilo de Cabeçalho */
+    header {
+      background-color: #333;
+      color: white;
+      padding: 10px 0;
+      text-align: center;
+    }
+
+    header h1 {
+      margin-bottom: 10px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    nav ul li {
+      margin-right: 10px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      padding: 5px 10px;
+      background-color: #555;
+      border-radius: 5px;
+    }
+
+    nav ul li a:hover {
+      background-color: #888;
+    }
+
+    /* Estilo da Imagem Hero */
+    .hero {
+      width: 100%;
+      height: 60vh;
+      background-image: url('moto-hero.jpg'); /* URL da imagem hero */
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+      position: relative;
+    }
+
+    .hero h2 {
+      font-size: 3em;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 20px;
+      border-radius: 8px;
+    }
+
+    /* Layout Principal */
+    main {
+      display: flex;
+      justify-content: space-between;
+      padding: 20px;
+    }
+
+    article {
+      flex: 70%;
+      background-color: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    aside {
+      flex: 25%;
+      background-color: #f9f9f9;
+      padding: 20px;
+      margin-left: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Estilo de Imagens */
+    figure img {
+      max-width: 100%;
+      border-radius: 8px;
+    }
+
+    figure figcaption {
+      font-size: 0.9em;
+      color: #555;
+      text-align: center;
+      margin-top: 5px;
+    }
+
+    /* Rodapé */
+    footer {
+      text-align: center;
+      background-color: #333;
+      color: white;
+      padding: 10px 0;
+      margin-top: 20px;
+    }
+
+    footer a {
+      color: #ddd;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      color: white;
+    }
+
+    /* --- Menu Responsivo --- */
+
+    .menu-icon {
+      display: none;
+      cursor: pointer;
+    }
+
+    nav ul {
+      display: flex;
+      flex-direction: row;
+    }
+
+    /* --- Media Queries para tornar o site responsivo --- */
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+      }
+
+      nav ul li {
+        margin: 10px 0;
+      }
+
+      .menu-icon {
+        display: block;
+        color: white;
+        font-size: 2em;
+        margin-right: 20px;
+      }
+
+      nav ul.show {
+        display: flex;
+      }
+
+      .hero h2 {
+        font-size: 2em;
+        padding: 10px;
+      }
+
+      main {
+        flex-direction: column;
+        padding: 10px;
+      }
+
+      aside {
+        margin-left: 0;
+        margin-top: 20px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero h2 {
+        font-size: 1.5em;
+        padding: 5px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Cabeçalho -->
+  <header>
+    <h1>Blog de Motociclistas</h1>
+    <nav>
+      <span class="menu-icon" onclick="toggleMenu()">&#9776;</span>
+      <ul id="menu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Imagem Hero -->
+  <section class="hero">
+    <h2>Viva a Liberdade Sobre Duas Rodas</h2>
+  </section>
+
+  <!-- Conteúdo Principal -->
+  <main>
+    <!-- Artigo Principal -->
+    <article>
+      <h2>Explorando as estradas com minha Harley Davidson</h2>
+      <p>Montar uma Harley é mais do que pilotar uma moto. É sentir o vento no rosto, o ronco do motor e a liberdade de desbravar as estradas sem destino. Neste artigo, compartilho minhas experiências nas viagens de moto mais emocionantes.</p>
+      
+      <figure>
+        <img src="harley-davidson.jpg" alt="Harley Davidson">
+        <figcaption>Minha Harley Davidson em uma de minhas viagens.</figcaption>
+      </figure>
+      
+      <p>Viajar de moto oferece uma experiência única, onde cada curva traz uma nova paisagem e cada quilômetro é uma nova história para contar. Não há nada como a sensação de liberdade e conexão com a estrada que uma Harley proporciona.</p>
+    </article>
+
+    <!-- Barra Lateral -->
+    <aside>
+      <h3>Artigos Relacionados</h3>
+      <ul>
+        <li><a href="#">Dicas de manutenção para sua Harley</a></li>
+        <li><a href="#">As melhores rotas de moto no Brasil</a></li>
+        <li><a href="#">Equipamentos essenciais para motociclistas</a></li>
+      </ul>
+    </aside>
+  </main>
+
+  <!-- Rodapé -->
+  <footer>
+    <p>&copy; 2024 Blog de Motociclistas. Todos os direitos reservados.</p>
+    <a href="mailto:contato@blogdemotociclistas.com">Contato</a>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      var menu = document.getElementById("menu");
+      menu.classList.toggle("show");
+    }
+  </script>
+
+</body>
+</html>
