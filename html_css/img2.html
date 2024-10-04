@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Página com Menu Sticky e Deslocamento Suave</title>
+    <style>
+        /* Estilos CSS */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: url('https://images.unsplash.com/photo-1605902711622-cfb43c443afa') no-repeat center center fixed;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            color: white;
+            scroll-behavior: smooth; /* Deslocamento suave */
+        }
+
+        header {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 10px 20px;
+            position: sticky; /* Fixa o cabeçalho no topo */
+            top: 0; /* Fica fixo no topo */
+            left: 0;
+            width: 100%; /* Faz o cabeçalho ocupar toda a largura */
+            z-index: 1000; /* Garante que o cabeçalho fique acima do conteúdo */
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+        main {
+            padding: 60px 20px; /* Adiciona espaço no topo para o cabeçalho */
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+        }
+
+        section {
+            margin-bottom: 20px;
+            padding: 20px; /* Adiciona espaçamento interno nas seções */
+            border: 1px solid white; /* Adiciona borda para destacar as seções */
+            border-radius: 5px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Meu Site</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Início</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="home">
+            <h2>Bem-vindo ao meu site!</h2>
+            <p>Este é um exemplo de página com uma imagem de fundo responsiva.</p>
+        </section>
+        <section id="sobre">
+            <h2>Sobre Mim</h2>
+            <p>Aqui você pode colocar informações sobre você.</p>
+        </section>
+        <section id="contato">
+            <h2>Contato</h2>
+            <p>Formas de contato.</p>
+        </section>
+    </main>
+    <footer>
+        <p>© 2024 Meu Site. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
