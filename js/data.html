@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Estrutura de Decisão</title>
+</head>
+<body>
+  <h1>Estrutura de Decisão com switch</h1>
+  <div id="saida">Saída</div>
+
+  <script>
+	  let saida = document.getElementById('saida');
+    let dataAtual = new Date();
+    let dia = dataAtual.getDate();
+    let mes = dataAtual.getMonth() + 1; // Adiciona 1 porque os meses começam em 0
+    let ano = dataAtual.getFullYear();
+    saida.innerHTML = "Data atual: " + dia + "/" + mes + "/" + ano);
+  </script>
+</body>
+</html>
